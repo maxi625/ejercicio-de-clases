@@ -1,0 +1,50 @@
+class Producto:
+ 
+     def __init__(self, nombre, precio, stock):
+ 
+         self.nombre = nombre
+ 
+         self.precio = precio
+ 
+         self.stock = stock
+ 
+ 
+     def aumentar_stock(self, cantidad):
+ 
+         if cantidad > 0:
+ 
+             self.stock += cantidad
+ 
+             print(f'Se ha aumentado el stock de {self.nombre} en {cantidad}. Nuevo stock: {self.stock}')
+ 
+         else:
+ 
+             print('La cantidad a aumentar debe ser mayor que cero.')
+ 
+ 
+     def disminuir_stock(self, cantidad):
+ 
+         if cantidad > 0:
+ 
+             if cantidad <= self.stock:
+ 
+                 self.stock -= cantidad
+ 
+                 print(f"Sele ha disminuido el stock de {self.nombre} en {cantidad}. Nuevo stock: {self.stock}")
+ 
+             else:
+ 
+                 print("No hay suficiente stock para disminuir esa cantidad.")
+ 
+         else:
+ 
+             print("La cantidad a disminuir debe ser mayor que cero.")  
+             
+ 
+ producto1 = Producto("Camiseta", 19.99, 50)
+ 
+ producto1.aumentar_stock(20)
+ 
+ producto1.disminuir_stock(10)
+ 
+ producto1.disminuir_stock(70) 
