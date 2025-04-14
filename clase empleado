@@ -1,0 +1,45 @@
+class Empleado:
+     def __init__(self, nombre, edad, salario, cargo):
+         self._nombre = nombre
+         self._edad = edad
+         self._salario = salario  
+         self._cargo = cargo
+ 
+     def get_nombre(self):
+         return self._nombre
+ 
+     def get_edad(self):
+         return self._edad
+ 
+     def get_salario(self):
+         return self._salario
+ 
+     def get_cargo(self):
+         return self._cargo
+ 
+     def set_nombre(self, nombre):
+         self._nombre = nombre
+ 
+     def set_edad(self, edad):
+         self._edad = edad
+ 
+     def set_salario(self, salario):
+         self._salario = salario
+ 
+     def set_cargo(self, cargo):
+         self._cargo = cargo
+ 
+     def calcular_salario_anual(self):
+         return self._salario * 12
+ 
+ empleado = Empleado("Carlos suarez", 30, 2500, "chef")
+ 
+ print("Nombre:", empleado.get_nombre())
+ print("Edad:", empleado.get_edad())
+ print("Cargo:", empleado.get_cargo())
+ print("Salario mensual:", empleado.get_salario())
+ print("Salario anual:", empleado.calcular_salario_anual())
+ 
+ empleado.set_salario(2800)
+ print("Nuevo salario mensual:", empleado.get_salario())
+ print("Nuevo salario anual:", empleado.calcular_salario_anual())
