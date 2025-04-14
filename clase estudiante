@@ -1,0 +1,84 @@
+class Estudiante:
+ 
+     def __init__(self, nombre, edad, carrera):
+ 
+         self.nombre = nombre
+ 
+         self.edad = edad
+ 
+         self.carrera = carrera
+ 
+         self.notas = []
+ 
+ 
+     def agregar_nota(self, nota):
+ 
+         if 0 <= nota <= 10:  
+ 
+             self.notas.append(nota)
+ 
+         else:
+ 
+             print("La nota debe estar entre 0 y 10.")
+ 
+ 
+     def calcular_nota_media(self):
+ 
+         if self.notas:
+ 
+             return sum(self.notas) / len(self.notas)
+ 
+         else:
+ 
+             return 0  
+ 
+ 
+ 
+     def obtener_nombre(self):
+ 
+         return self.nombre
+ 
+ 
+     def establecer_nombre(self, nombre):
+ 
+         self.nombre = nombre
+ 
+ 
+     def obtener_edad(self):
+ 
+         return self.edad
+ 
+ 
+     def establecer_edad(self, edad):
+ 
+         self.edad = edad
+ 
+ 
+     def obtener_carrera(self):
+ 
+         return self.carrera
+ 
+ 
+     def establecer_carrera(self, carrera):
+ 
+         self.carrera = carrera
+ 
+ 
+ 
+ 
+ estudiante1 = Estudiante("Antonio messi", 20, "Programatica")
+ 
+ estudiante1.agregar_nota(8.5)
+ 
+ estudiante1.agregar_nota(9.0)
+ 
+ estudiante1.agregar_nota(7.5)
+ 
+ 
+ print(f"Nombre: {estudiante1.obtener_nombre()}")
+ 
+ print(f"Edad: {estudiante1.obtener_edad()}")      
+ 
+ print(f"Carrera: {estudiante1.obtener_carrera()}")  
+ 
+ print(f"Nota media: {estudiante1.calcular_nota_media()}") 
