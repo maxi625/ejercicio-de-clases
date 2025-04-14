@@ -1,0 +1,36 @@
+class Tienda:
+     def __init__(self, nombre):
+         self.nombre = nombre
+         self.productos = []
+ 
+     def añadir_producto(self, producto):
+         
+         if producto not in self.productos:
+             self.productos.append(producto)
+             print(f"Producto '{producto}' añadido.")
+         else:
+             print(f"El producto '{producto}' ya está en la tienda.")
+ 
+     def eliminar_producto(self, producto):
+        
+         if producto in self.productos:
+             self.productos.remove(producto)
+             print(f"Producto '{producto}' eliminado.")
+         else:
+             print(f"El producto '{producto}' no se encuentra en la tienda.")
+ 
+     def obtener_productos(self):
+        
+         return self.productos
+ 
+ 
+ tienda = Tienda("Tienda Central")
+ 
+ tienda.añadir_producto("Pan")
+ tienda.añadir_producto("Leche")
+ tienda.añadir_producto("Huevos")
+ 
+ print("Productos disponibles:", tienda.obtener_productos())
+ 
+ tienda.eliminar_producto("Leche")
+ print("Productos actualizados:", tienda.obtener_productos())
