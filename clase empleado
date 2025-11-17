@@ -32,14 +32,14 @@ class Empleado:
      def calcular_salario_anual(self):
          return self._salario * 12
  
- empleado = Empleado("Carlos suarez", 30, 2500, "chef")
+ empleado = Empleado("carlos suarez", 30, 2500, "chef")
  
- print("Nombre:", empleado.get_nombre())
- print("Edad:", empleado.get_edad())
- print("Cargo:", empleado.get_cargo())
- print("Salario mensual:", empleado.get_salario())
- print("Salario anual:", empleado.calcular_salario_anual())
+ print("nombre:", empleado.get_nombre())
+ print("edad:", empleado.get_edad())
+ print("cargo:", empleado.get_cargo())
+ print("salario mensual:", empleado.get_salario())
+ print("salario anual:", empleado.calcular_salario_anual())
  
  empleado.set_salario(2800)
- print("Nuevo salario mensual:", empleado.get_salario())
- print("Nuevo salario anual:", empleado.calcular_salario_anual())
+ print("nuevo salario mensual:", empleado.get_salario())
+ print("nuevo salario anual:", empleado.calcular_salario_anual())
